@@ -1,3 +1,37 @@
-[gd_scene format=2]
+[gd_scene load_steps=20 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://assets/puzzle_two/3i.png" type="Texture" id=1]
+[ext_resource path="res://assets/puzzle_two/1c.png" type="Texture" id=2]
+[ext_resource path="res://assets/puzzle_two/2i.png" type="Texture" id=3]
+[ext_resource path="res://assets/puzzle_two/1i.png" type="Texture" id=4]
+[ext_resource path="res://assets/puzzle_one/3i.png" type="Texture" id=5]
+[ext_resource path="res://assets/puzzle_two/3c.png" type="Texture" id=6]
+[ext_resource path="res://assets/puzzle_two/1d.png" type="Texture" id=7]
+[ext_resource path="res://assets/puzzle_one/3d.png" type="Texture" id=8]
+[ext_resource path="res://assets/puzzle_two/2c.png" type="Texture" id=9]
+[ext_resource path="res://assets/puzzle_two/2d.png" type="Texture" id=10]
+[ext_resource path="res://assets/puzzle_two/3d.png" type="Texture" id=11]
+[ext_resource path="res://assets/puzzle_one/1c.png" type="Texture" id=12]
+[ext_resource path="res://assets/puzzle_one/3c.png" type="Texture" id=13]
+[ext_resource path="res://assets/puzzle_one/1d.png" type="Texture" id=14]
+[ext_resource path="res://assets/puzzle_one/2d.png" type="Texture" id=15]
+[ext_resource path="res://assets/puzzle_one/2c.png" type="Texture" id=16]
+[ext_resource path="res://assets/puzzle_one/1i.png" type="Texture" id=17]
+[ext_resource path="res://assets/puzzle_one/2i.png" type="Texture" id=18]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "PuzzleTwo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "PuzzleOne",
+"speed": 5.0
+} ]
+
+[node name="Pieces" type="AnimatedSprite"]
+frames = SubResource( 1 )
+animation = "PuzzleTwo"
