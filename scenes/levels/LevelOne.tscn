@@ -11,10 +11,73 @@ position = Vector2( 520, 320 )
 scale = Vector2( 1.7, 1.7 )
 texture = ExtResource( 1 )
 
-[node name="Slot" parent="." instance=ExtResource( 3 )]
-position = Vector2( 529, 184 )
+[node name="Pos1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 437, 184 )
 
-[node name="Pieces" parent="." instance=ExtResource( 2 )]
-position = Vector2( 270, 209 )
+[node name="Pos2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 507, 184 )
+
+[node name="Pos3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 577, 184 )
+
+[node name="Pos4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 437, 254 )
+
+[node name="Pos5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 507, 254 )
+
+[node name="Pos6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 577, 254 )
+
+[node name="Pos7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 437, 324 )
+
+[node name="Pos8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 507, 324 )
+
+[node name="Pos9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 577, 324 )
+
+[node name="Piec1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 930, 384 )
+animation = "PuzzleOne"
+
+[node name="Piec2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 193, 492 )
 animation = "PuzzleOne"
 frame = 1
+
+[node name="Piec3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 118, 260 )
+animation = "PuzzleOne"
+frame = 2
+
+[node name="Piec4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 241, 360 )
+animation = "PuzzleOne"
+frame = 3
+
+[node name="Piec5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 774, 295 )
+animation = "PuzzleOne"
+frame = 4
+
+[node name="Piec6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 762, 151 )
+animation = "PuzzleOne"
+frame = 5
+
+[node name="Piec7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 763, 466 )
+animation = "PuzzleOne"
+frame = 6
+
+[node name="Piec8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 214, 150 )
+animation = "PuzzleOne"
+frame = 7
+
+[node name="Piec9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 900, 216 )
+animation = "PuzzleOne"
+frame = 8
