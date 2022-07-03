@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/background.webp" type="Texture" id=1]
 [ext_resource path="res://scenes/elements/Pieces.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/elements/Slot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/puzzle_one/example_puzzle_one.png" type="Texture" id=4]
+[ext_resource path="res://scenes/levels/LevelOne.gd" type="Script" id=5]
 
 [node name="LevelOne" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 520, 320 )
@@ -81,3 +84,8 @@ frame = 7
 position = Vector2( 900, 216 )
 animation = "PuzzleOne"
 frame = 8
+
+[node name="ExamplePuzzleOne" type="Sprite" parent="."]
+position = Vector2( 505, 480 )
+scale = Vector2( 0.31699, 0.31699 )
+texture = ExtResource( 4 )
