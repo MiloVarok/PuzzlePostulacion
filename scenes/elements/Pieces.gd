@@ -3,7 +3,7 @@ extends AnimatedSprite
 var inside = false
 var placement = false
 var areaCount = 0
-
+var clickMouse = Vector2()
 var memory = Vector2()
 
 func _ready():
@@ -11,11 +11,9 @@ func _ready():
 
 func _process(delta):
 	if inside == true:
-		self.set_global_position(get_global_mouse_position())
-		self.z_index = 2 #Trae la pieza al frente al arrastrarla
+		self.set_global_position(get_global_mouse_position() + clickMouse)
 	if placement == true and Input.is_action_just_released("left_click"):
 		self.set_position(memory)
-		self.z_index = 0
 		placement = false
 	pass
 
@@ -36,6 +34,9 @@ func _on_AreaPieces_area_exited(area):
 func _on_AreaPieces_input_event(viewport, event, shape_idx): #movimiento de la pieza, detección del click
 	if event.is_action_pressed("left_click"):
 		inside = true
+		self.z_index = 1 #Trae la pieza al frente al arrastrarla
+		clickMouse = self.get_global_position() - get_global_mouse_position()
 	if event.is_action_released("left_click"):
 		inside = false
+		self.z_index = 0 #Vuelve la pieza atrás al soltarla
 	pass
