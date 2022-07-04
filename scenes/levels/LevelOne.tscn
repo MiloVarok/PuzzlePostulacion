@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/background.webp" type="Texture" id=1]
 [ext_resource path="res://scenes/elements/Pieces.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/elements/Slot.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/puzzle_one/example_puzzle_one.png" type="Texture" id=4]
 [ext_resource path="res://scenes/levels/LevelOne.gd" type="Script" id=5]
+[ext_resource path="res://assets/button_background.png" type="Texture" id=6]
+[ext_resource path="res://assets/game_font.tres" type="DynamicFont" id=7]
+[ext_resource path="res://scenes/elements/Timer.tscn" type="PackedScene" id=8]
 
 [node name="LevelOne" type="Node2D"]
 script = ExtResource( 5 )
@@ -89,3 +92,24 @@ frame = 8
 position = Vector2( 505, 480 )
 scale = Vector2( 0.31699, 0.31699 )
 texture = ExtResource( 4 )
+
+[node name="Timer" parent="." instance=ExtResource( 8 )]
+position = Vector2( 217, -44 )
+
+[node name="ContinueButton" type="TextureButton" parent="."]
+margin_left = 351.0
+margin_top = 375.0
+margin_right = 670.0
+margin_bottom = 463.0
+texture_normal = ExtResource( 6 )
+expand = true
+
+[node name="ContinueText" type="Label" parent="."]
+margin_left = 376.0
+margin_top = 398.0
+margin_right = 646.0
+margin_bottom = 445.0
+custom_fonts/font = ExtResource( 7 )
+text = "CONTINUAR"
+
+[connection signal="button_down" from="ContinueButton" to="." method="_on_ContinueButton_button_down"]
